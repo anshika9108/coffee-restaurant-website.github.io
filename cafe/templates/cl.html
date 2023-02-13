@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+
+        background-color:green;
+        }
+    </style>
+</head>
+<body>
+
+<form method="POST" action="/cl/">
+
+    {% csrf_token %}
+
+<table alighn="center">
+    <tr>
+        <td></td>
+        <td>{{ gaurav.as_p }}</td>
+
+    </tr>
+    <tr>
+
+            <td><button type="submit" class="save btn btn-default">Save</button></td>
+
+
+    </tr>
+
+</table>
+
+
+</form>
+
+</body>
+</html>

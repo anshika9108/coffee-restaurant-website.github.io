@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST" action="/update/{{employee.id}}">
+
+    {% csrf_token %}
+    <h3>update details</h3>
+    <table>
+        <tr>
+            <td>employe name</td>
+            <td><input type="text" name="first_name" id="name" required maxlength="20" value="{{ employee.
+
+            first_name }} "></td>
+
+        </tr>
+        <tr>
+            <td>employe lastname</td>
+            <td><input type="text" name="last_name" id="lastname" required maxlength="100" value="{{ employee.first_name }} "></td>
+
+        </tr>
+        <tr>
+            <td>contact</td>
+            <td><input type="text" name="contact" id="contact" required maxlength="100" value="{{ employee.contact }}"></td>
+
+        </tr>
+          <tr>
+            <td>password</td>
+            <td><input type="text" name="password" id="password" required maxlength="200" value="{{ employee.password }}"></td>
+           <td><button type="submit">update</button>
+   </td>      </tr>
+
+
+    </table>
+
+</form>
+
+</body>
+</html>

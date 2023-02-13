@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <p>user registration</p>
+    <form action="" method="POST">
+{% csrf_token %}
+        <p style="text-align:center">user:<input type="text" name="username"></p>
+        <p style="text-align:center">mailbox:<input type="text" name="email"></p>
+        <p style="text-align:center">password:<input type="text" name="password"></p>
+        <input type="submit" value=" register"/>
+        <p style="color: #ff0000;text-align:center">{{error_name}}</p>
+<!--        #error ko render-->
+    </form>
+</center>
+
+</body>
+</html>
+

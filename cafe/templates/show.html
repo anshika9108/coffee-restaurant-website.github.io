@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static  %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+
+        background-color:green;
+        }
+    </style>
+</head>
+<body>
+<table alighn="center">
+    <thead>
+    <tr>
+        <td>id</td>
+        <td>name</td>
+         <td>Lname</td>
+        <td>contact</td>
+         <td>password</td>
+    </tr>
+    </thead>
+{% for employee in gaurav  %}
+    <tr>
+        <td>{{ employee.first_name }}</td>
+        <td>{{ employee.last_name }}</td>
+        <td>{{ employee.contact }}</td>
+        <td>{{ employee.password }}</td>
+        <td>
+            <a href="/edit/{{ employee.id }}" >edit</a>
+            <a href="/delete/{{ employee.id }}" >delete</a>
+
+
+        </td>
+
+
+    </tr>
+{% endfor %}
+
+
+    <tr>
+
+           <td>
+
+
+            <center>
+<!--                 <td><button type="submit" class="save btn btn-default">add new record</button></td>-->
+
+<!--                  <a href="#">add new record</a>-->
+
+            </center>
+        </td>
+
+
+    </tr>
+
+
+
+</table>
+
+
+
+
+</body>
+</html>

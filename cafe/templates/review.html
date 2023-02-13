@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1"> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap>
+
+<title>Image Uploader</title>
+
+</head>
+
+<body>
+
+<div class ="container>
+  <div class="py-5 text-center bg-secondary text-white"  >
+    <h1 class="mb-3">Image Upload</h1>
+      #form ki field html se bnye gye ha
+    <form action="" method="POST" enctype="multipart/form-data">
+
+{% csrf_token %}
+
+{{fm}}
+
+{% for fm in messages %}  #loop chala rkha ha image upoad krne ko
+      <h2 class="btn btn-success">
+
+{{fm}   #image upload ki key
+</h2>
+
+{% endfor %} #ye loop band kr rkha ha
+
+<input type="submit" class="btn btn-danger" value="Upload">
+
+</form>
+
+</div>
+
+<div class="row">
+
+{% for x in img %} #ek or loop ye dikhaega kis data ko img upload ke a
+    <div class="col-sm-4">
+      <div class="card m-2">
+     <img src="{{x.photo.url}}" alt="mypic" class="card-img-top" height="200">
+        <div class="card-footer">
+        <small class="text-muted">{{x.date}}</small>
+        </div>
+
+</div>
+</div>
+
+{% endfor %}
+</div>
+</head>
+</html>
+
+
+
+
